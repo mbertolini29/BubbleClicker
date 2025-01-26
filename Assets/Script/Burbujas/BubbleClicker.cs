@@ -8,25 +8,35 @@ public class BubbleClicker : MonoBehaviour
 
     //[Header("Costo")]
     //public int cost;
+    int previousNum = -1; // Variable para almacenar el número anterior
 
     //[Header("Cantidad de burbujas")]
     //public int bubblesPerClick = 1;
-    public AudioSource[] asdasf; 
+    public AudioSource[] asdasf;
 
+    private void Start()
+    {
+        //resourceManager = GetComponent<ResourceManager>();
+        //respiratorManager = GetComponent<RespiratorManager>();
+    }
 
     private void OnMouseDown()
     {
         resourceManager.AddBubbles(respiratorManager.bubblesPerClick);
 
-
         respiratorManager.ClickSprite();
 
-        int num = Random.Range(0, asdasf.Length);
+        int num;
+
+        do
+        {
+            num = Random.Range(0, asdasf.Length); // Genera un número aleatorio
+        } while (num == previousNum); // Repite si el número es igual al anterior
+
         asdasf[num].Play();
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //}
+        //Debug.Log(num);
+        previousNum = num;
     }
 
     private void Update()

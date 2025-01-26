@@ -151,3 +151,5 @@ MonoBehaviour:
   speed: 1
   leftBound: -5
   rightBound: 1
+  upperBound: 1
+  lowerBound: -3
