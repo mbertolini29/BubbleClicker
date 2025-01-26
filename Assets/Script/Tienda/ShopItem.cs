@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System.Collections.Generic;
 
 public class ShopItem : MonoBehaviour
 {
@@ -6,6 +9,10 @@ public class ShopItem : MonoBehaviour
     [SerializeField] FishesManager fishesManager;
     [SerializeField] RespiratorManager respiratorManager;
     [SerializeField] PeceraManager peceraManager;
+    [SerializeField] BotonPeces botonPeces;
+
+    public AudioSource audioSource; // Referencia al AudioSource
+    public AudioClip soundA; // Sonido A
 
     public GameObject maps;
 
@@ -26,6 +33,8 @@ public class ShopItem : MonoBehaviour
 
         if (!resourceManager.SpendBubbles(fish.cost))
         {
+
+            audioSource.PlayOneShot(soundA); // Reproduce el sonido A
             Debug.Log("no tienes suficiente dinero.");
             return;
         }
@@ -93,8 +102,39 @@ public class ShopItem : MonoBehaviour
             Transform parentTransform = maps.transform;
             newPecera.transform.SetParent(parentTransform);
 
+            //   
             peceraManager.numPecera++;
+
+            ///nueva pecera... cambio la imagen
+            ActualizarBotones(peceraManager.numPecera);
         }    
+    }
+
+    void ActualizarBotones(int numPecera)
+    {
+        // Obtener la lista de peces según el tipo de pecera
+        List<Fish> pecesDisponibles = fishesManager.GetFishListByType(numPecera);
+
+        if (pecesDisponibles == null || pecesDisponibles.Count < 3)
+        {
+            Debug.LogError("No hay suficientes peces para esta pecera.");
+            return;
+        }
+
+        // Actualizar los botones de la tienda
+        for (int i = 0; i < botonPeces.botonPecera.Length; i++) // Asegúrate de que tengas un array de botones
+        {
+            //Button boton = botonPeces.botonPecera[i];
+            //Image imagenBoton = boton.GetComponent<Image>();
+            //Text textoBoton = boton.GetComponentInChildren<Text>();            
+
+            if (botonPeces.imagenBoton[i] != null && botonPeces.textoBoton[i] != null && i < pecesDisponibles.Count)
+            {
+                Fish pez = pecesDisponibles[i];
+                botonPeces.imagenBoton[i].sprite = pez.gameObject.GetComponent<SpriteRenderer>().sprite; // Cambiar la imagen del botón
+                botonPeces.textoBoton[i].text = $"{pez.cost} B"; // Cambiar el texto del botón
+            }
+        }
     }
 }
 

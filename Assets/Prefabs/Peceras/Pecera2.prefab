@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -414214685
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6070801068492814676, guid: c97092338e2db6546b92bef9ff62826e, type: 3}
+  m_Sprite: {fileID: -6070801068492814676, guid: 228acfdb7b216fc4e98de8f9fdfc01be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a36b56af112194580959d2dd4945ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 30
+  cost: 3000
   minFishCount: 0
   maxFishCount: 10

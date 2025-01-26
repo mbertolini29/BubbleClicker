@@ -5,6 +5,7 @@ public class BubbleClicker : MonoBehaviour
 {
     [SerializeField] ResourceManager resourceManager;
     [SerializeField] RespiratorManager respiratorManager;
+    [SerializeField] BurbujaSpawner burbuja;
 
     //[Header("Costo")]
     //public int cost;
@@ -24,6 +25,10 @@ public class BubbleClicker : MonoBehaviour
     {
         resourceManager.AddBubbles(respiratorManager.bubblesPerClick);
 
+        //llamar burbujas.
+        burbuja.SpawnBurbuja();
+
+        //
         respiratorManager.ClickSprite();
 
         int num;
