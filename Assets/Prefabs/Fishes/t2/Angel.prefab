@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c226630aa779a344a34fbfb6fc17f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1500
+  cost: 40
   speed: 1
   leftBound: -5
   rightBound: 1

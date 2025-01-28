@@ -43,7 +43,7 @@ public class RespiratorManager : MonoBehaviour
         // Usa una fórmula para determinar
         bubblesPerClick++;
         // las burbujas por clic en cada nivel
-        bubblesPerClick = (bubblesPerClick * (bubblesPerClick + 1) / 2);
+        bubblesPerClick = (bubblesPerClick * (bubblesPerClick + 5) / 2);
     }
 
     public void ClickSprite()

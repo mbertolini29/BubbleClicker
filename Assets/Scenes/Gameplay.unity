@@ -4279,7 +4279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblesPerClick: 1
   numRespirator: 0
-  costoRespirator: 64000000b80b000010270000
+  costoRespirator: 1e0000003c0000005a000000
   spriteRenderer: {fileID: 2341079307593344718}
   respiratorSprites:
   - {fileID: 8668653410517453584, guid: 85ba654cc8090a543a4b289959c6792d, type: 3}

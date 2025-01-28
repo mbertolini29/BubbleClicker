@@ -100,6 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a36b56af112194580959d2dd4945ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 3000
+  cost: 100
   minFishCount: 0
   maxFishCount: 10
