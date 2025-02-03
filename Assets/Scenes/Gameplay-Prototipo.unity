@@ -689,7 +689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125118863}
-  - component: {fileID: 125118864}
+  - component: {fileID: 125118865}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -712,7 +712,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 43840215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &125118864
+--- !u!114 &125118865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -721,10 +721,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 125118862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d6d42a474627340acca39afaf206bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 63d40e06e236f394982b00c0eac5c03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleText: {fileID: 991672590}
+  fishText: {fileID: 246128538}
+  gameEvent: {fileID: 11400000, guid: 6fda40137b98a344792bd445a34b7b79, type: 2}
 --- !u!1 &136236200
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148626217}
   - component: {fileID: 148626218}
+  - component: {fileID: 148626219}
   m_Layer: 0
   m_Name: EconomyManager
   m_TagString: Untagged
@@ -906,6 +909,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onBubbleGenerated: {fileID: 11400000, guid: 6fda40137b98a344792bd445a34b7b79, type: 2}
+--- !u!114 &148626219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148626216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57d1f0d1f88ac34099163577a3080e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableFishes:
+  - {fileID: 11400000, guid: 85cbb237ddc6bcd41b3e43773e79522f, type: 2}
+  - {fileID: 11400000, guid: 8042673b058b5e4418f886dcda8209e5, type: 2}
+  - {fileID: 11400000, guid: 82e6f98609dd8634caf2fbceebf16552, type: 2}
+  fishesManager: {fileID: 595732624}
+  economyManager: {fileID: 148626218}
 --- !u!1 &246128536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,9 +1148,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606480283}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: PezItem
+      - m_Target: {fileID: 148626219}
+        m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
+        m_MethodName: BuyFish
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,7 +1205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248047818}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -1198,7 +1219,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248047818}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
@@ -1331,7 +1352,6 @@ GameObject:
   - component: {fileID: 408009284}
   - component: {fileID: 408009283}
   - component: {fileID: 408009282}
-  - component: {fileID: 408009281}
   - component: {fileID: 408009280}
   - component: {fileID: 408009285}
   m_Layer: 0
@@ -1438,29 +1458,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &408009281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408009273}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71bef1cf9dc3d047aa0e95a93b2ef09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceManager: {fileID: 1606480284}
-  respiratorManager: {fileID: 1606480286}
-  burbuja: {fileID: 1606480289}
-  asdasf:
-  - {fileID: 408009280}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!61 &408009282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1590,7 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickConfig: {fileID: 11400000, guid: 48d6da25bde1a6d46a7e74431cb7dec1, type: 2}
-  onBubbleGenerated: {fileID: 11400000, guid: 6fda40137b98a344792bd445a34b7b79, type: 2}
+  economyManager: {fileID: 148626218}
 --- !u!1 &466224637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &563501839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2195,6 +2192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595732623}
+  - component: {fileID: 595732624}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2217,6 +2215,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 43840215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595732624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595732622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8781de3a7948df54b824f21b05fff1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,9 +2563,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606480283}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: PezItem
+      - m_Target: {fileID: 148626219}
+        m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
+        m_MethodName: BuyFish
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2610,7 +2620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841562156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -2624,7 +2634,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841562156}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
@@ -3069,9 +3079,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606480283}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: PezItem
+      - m_Target: {fileID: 148626219}
+        m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
+        m_MethodName: BuyFish
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3126,7 +3136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007607495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -3140,7 +3150,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007607495}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
@@ -4454,9 +4464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allFishT1:
-  - {fileID: 8691811144586484443, guid: 8f0b39bcd04d7c54f818041ad75017ce, type: 3}
-  - {fileID: 838279365567683257, guid: 5ce8df261a8a0344eab9a871265782d5, type: 3}
-  - {fileID: 9070409438920861691, guid: 4df1bb7070fa7204ebdb7d2b44c5f144, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   allFishT2:
   - {fileID: 6751752158037923751, guid: cacfabfceef1c064c85c2ae0b11f19a7, type: 3}
   - {fileID: 9154662492572962064, guid: cbe48987cc8538949afa584dac40ab63, type: 3}
@@ -5692,21 +5702,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 346110204}
     m_Modifications:
-    - target: {fileID: 1208873049540676674, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3759293399856651083, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5826236522534162529, guid: 78ea826353809a1499121b8e218baf99, type: 3}
     - target: {fileID: 3979841585943318021, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
       propertyPath: m_Name
       value: Pecera
-      objectReference: {fileID: 0}
-    - target: {fileID: 3979841585943318021, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5988992172468792164, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
       propertyPath: m_LocalPosition.x

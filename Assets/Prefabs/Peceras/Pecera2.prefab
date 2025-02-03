@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 952247453925305352}
   - component: {fileID: 1833344691026154624}
   - component: {fileID: 3439334341328071551}
+  - component: {fileID: -3146810492174589343}
   m_Layer: 0
   m_Name: Pecera2
   m_TagString: Aquarium
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4465090061002689413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6a36b56af112194580959d2dd4945ae, type: 3}
   m_Name: 
@@ -103,3 +104,16 @@ MonoBehaviour:
   cost: 100
   minFishCount: 0
   maxFishCount: 10
+--- !u!114 &-3146810492174589343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465090061002689413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bd683cb60b83a42998e2cfe699ab7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aquariumData: {fileID: 0}
