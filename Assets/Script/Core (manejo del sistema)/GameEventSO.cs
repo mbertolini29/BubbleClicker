@@ -3,22 +3,19 @@ using UnityEngine.Events;
 
 namespace BubbleClicker
 {
-    [CreateAssetMenu(fileName = "GameEvent", menuName = "Bubble Clicler/GameEvent")]
+    [CreateAssetMenu(fileName = "GameEvent", menuName = "BubbleClicker/GameEvent")]
     public class GameEventSO : ScriptableObject
     {
-        public UnityAction<int> OnBubblesGenerated;
+        // UI: total de burbujas cambia
+        public UnityAction<double> OnBubblesGenerated;
+
+        // UI: cantidad de peces cambió (actual / max)
         public UnityAction<int, int> OnFishCountUpdated;
 
         //raise = aumentar.
-        public void Raise(int amount)
-        {
-            OnBubblesGenerated?.Invoke(amount);
-        }
+        public void RaiseBubblesChanged(double total) => OnBubblesGenerated?.Invoke(total);
 
         //raise = aumentar peces.
-        public void RaiseCountFish(int currentFish, int maxFish)
-        {
-            OnFishCountUpdated?.Invoke(currentFish, maxFish);
-        }
+        public void RaiseFishCount(int current, int max) => OnFishCountUpdated?.Invoke(current, max);
     }
 }

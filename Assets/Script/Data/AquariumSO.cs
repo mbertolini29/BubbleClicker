@@ -14,7 +14,10 @@ namespace BubbleClicker
         public int maxFishCount = 5;
 
         // produce burbujas?
-        public float bubbleProduction = 1.04f; //4%
+        public double bubbleProduction = 1.04f; //4%
+
+        // 
+        public GameObject prefab; // Prefab visual de la pecera (opcional)
 
         //sonido de pecera llena.
         //sonido de compra??

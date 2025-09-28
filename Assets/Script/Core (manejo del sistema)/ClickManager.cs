@@ -5,7 +5,7 @@ namespace BubbleClicker
     public class ClickManager : MonoBehaviour
     {
         [SerializeField] private ClickConfigSO clickConfig;
-        [SerializeField] private EconomyManager economyManager;
+        [SerializeField] private EconomyManager economy;
 
         private void Awake()
         {
@@ -14,7 +14,8 @@ namespace BubbleClicker
 
         private void OnMouseDown()
         {
-            economyManager.AddBubbles(clickConfig.bubblesPerClick);
+            if(economy != null && clickConfig != null)
+                economy.AddBubbles(clickConfig.bubblesPerClick);
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3741453931192211656}
   - component: {fileID: 6732499579302957606}
   - component: {fileID: 2551531713780458798}
-  - component: {fileID: 1253229439003196768}
+  - component: {fileID: -8978690681112433992}
   m_Layer: 0
   m_Name: Cangrejo
   m_TagString: Untagged
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9644445, y: 1.1644444}
   m_EdgeRadius: 0
---- !u!114 &1253229439003196768
+--- !u!114 &-8978690681112433992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,12 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2893785507269866048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c226630aa779a344a34fbfb6fc17f07, type: 3}
+  m_Script: {fileID: 11500000, guid: ac82c6d96d5eca04ab791d09c413b852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 8000
-  speed: 1
-  leftBound: -5
-  rightBound: 1
-  upperBound: -1
-  lowerBound: -3
+  data: {fileID: 11400000, guid: 94ccf3ea55feb7747954ad113116d693, type: 2}

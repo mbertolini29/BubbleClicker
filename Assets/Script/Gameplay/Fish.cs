@@ -4,18 +4,23 @@ namespace BubbleClicker
 {
     public class Fish : MonoBehaviour
     {
-        private FishSO fishData;
-        private Vector2 moveDirection;
-        private Aquarium aquarium;
+        [SerializeField] private FishSO data;
+        
+        private Vector2 dir;
+
+        private Aquarium aquarium;        
         private Vector2 boundsX;
         private Vector2 boundsY;
 
-        public void Initialize(FishSO data)
+        public FishSO Data => data;
+
+        public void Init(Aquarium owner)
         {
-            fishData = data;
+            aquarium = owner;
 
             //encuentra el acuario:
-            aquarium = FindFirstObjectByType<Aquarium>();
+            //aquarium = FindFirstObjectByType<Aquarium>();
+
             boundsX = aquarium.GetBoundsWidth();
             boundsY = aquarium.GetBoundsHeight();
 
@@ -24,30 +29,32 @@ namespace BubbleClicker
             //bool movingLeft = Random.value > 0.5f; 
             bool movingLeft = true;
             bool movingUp = true;
-            moveDirection = new Vector2(movingLeft ? -1 : 1, movingUp ? 1 : -1).normalized;
+            dir = new Vector2(movingLeft ? -1 : 1, movingUp ? 1 : -1).normalized;
         }
 
         private void Update()
         {
+            if (aquarium == null) return;
+
             MoveFish();
         }
 
         private void MoveFish()
         {
-            transform.Translate(moveDirection * fishData.speed * Time.deltaTime);
+            transform.Translate(dir * data.speed * Time.deltaTime);
 
             //horizontal
             if (transform.position.x > boundsX.y|| 
                 transform.position.x <= boundsX.x)
             {
-                moveDirection.x = -moveDirection.x;
+                dir.x = -dir.x;
                 FlipHorizontal();
             }
 
             if (transform.position.y > boundsY.y|| 
                 transform.position.y <= boundsY.x)
             {
-                moveDirection.y = -moveDirection.y;
+                dir.y = -dir.y;
             }
         }
 

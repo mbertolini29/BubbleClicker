@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4781034263618386868}
   - component: {fileID: 3286346439994763481}
   - component: {fileID: 7763504340202154120}
-  - component: {fileID: 9154662492572962064}
+  - component: {fileID: -2974133679784222759}
   m_Layer: 0
   m_Name: Cirujano
   m_TagString: Untagged
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9422222, y: 1.0088888}
   m_EdgeRadius: 0
---- !u!114 &9154662492572962064
+--- !u!114 &-2974133679784222759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,12 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7514599611270205802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c226630aa779a344a34fbfb6fc17f07, type: 3}
+  m_Script: {fileID: 11500000, guid: ac82c6d96d5eca04ab791d09c413b852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 60
-  speed: 1
-  leftBound: -5
-  rightBound: 1
-  upperBound: 1
-  lowerBound: -3
+  data: {fileID: 11400000, guid: dc7c9a509eab1344db573896fc9c13c5, type: 2}

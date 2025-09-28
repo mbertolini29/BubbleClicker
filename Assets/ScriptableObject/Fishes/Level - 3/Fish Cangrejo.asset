@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95e705be8546a524e8c6a921e49ac408, type: 3}
-  m_Name: Fish Golden
+  m_Name: Fish Cangrejo
   m_EditorClassIdentifier: 
-  fishName: Golden
-  fishPrefab: {fileID: 7139224896879147281, guid: 8f0b39bcd04d7c54f818041ad75017ce, type: 3}
-  cost: 20
+  fishName: Cangrejo
+  fishPrefab: {fileID: 2893785507269866048, guid: 95c78a54ebb26c34b8c69d80efb0da53, type: 3}
+  cost: 300
   bubblesPerSecond: 0
   speed: 1
-  leftBound: -5.5
-  rightBound: 1
-  upperBound: 3
-  lowerBound: -3
   buySound: {fileID: 0}

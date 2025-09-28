@@ -7,27 +7,25 @@ namespace BubbleClicker
 {
     public class Aquarium : MonoBehaviour
     {
+        [SerializeField] private AquariumSO data;        
         [SerializeField] private GameEventSO gameEvent;  
 
-        [SerializeField] private AquariumSO aquariumData;        
+        [SerializeField] private List<Fish> fishesInAquarium = new();
 
-        [SerializeField] private List<Fish> fishesInAquarium = new List<Fish>();
-        
+        public AquariumSO Data => data;
+
         //para un futuro, la produccion de burbujas.
         private float bubbleProduction = 0f;
 
-        //tamaño de pecera.
-        public Vector2 GetBoundsWidth() => aquariumData.sizeX;
-        public Vector2 GetBoundsHeight() => aquariumData.sizeY;
+        //tamaño de pecera (Límites accesibles por los peces)
+        public Vector2 GetBoundsWidth() => data.sizeX;
+        public Vector2 GetBoundsHeight() => data.sizeY;
 
         //cant de peces.
-        public int GetFishCount() => fishesInAquarium.Count;
-        public int GetMaxFishCount() => aquariumData.maxFishCount;
+        public int FishCount => fishesInAquarium.Count;
+        public int MaxFish => data.maxFishCount;
 
-        public bool CanAddFish() 
-        {
-            return fishesInAquarium.Count < aquariumData.maxFishCount;
-        }
+        public bool CanAddFish() => FishCount < MaxFish;
 
         public bool AddFish(Fish fish)
         {
@@ -39,22 +37,24 @@ namespace BubbleClicker
             }
 
             fishesInAquarium.Add(fish);
-            gameEvent.RaiseCountFish(GetFishCount(), GetMaxFishCount());
+            gameEvent?.RaiseFishCount(FishCount, MaxFish);
             return true;
         }
 
         public void RemoveFish(Fish fish)
         {
-            if (fishesInAquarium.Contains(fish))
+            if (fishesInAquarium.Remove(fish))
             {
-                fishesInAquarium.Remove(fish);
-                gameEvent.RaiseCountFish(GetFishCount(), GetMaxFishCount());
+                gameEvent?.RaiseFishCount(FishCount, MaxFish);
             }
         }
 
+        public IEnumerable<Fish> GetAllFish() => fishesInAquarium;
+
+
         private void UpdateBubbleProduction()
         {
-            //bubbleProduction *= aquariumData.bubbleProduction;
+            //bubbleProduction *= data.bubbleProduction;
         }
 
         private void GenerateBubbles()
@@ -64,7 +64,7 @@ namespace BubbleClicker
         
         //public int GetTotalBubbleProduction()
         //{
-        //    return fishesInAquarium.Sum(FishSO => FishSO.BubblesPerSecond) * (int)aquariumData.bubbleMultiplier;
+        //    return fishesInAquarium.Sum(FishSO => FishSO.BubblesPerSecond) * (int)data.bubbleMultiplier;
         //}
 
     }

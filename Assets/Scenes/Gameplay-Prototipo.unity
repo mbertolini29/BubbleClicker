@@ -154,6 +154,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 148626217}
+  - {fileID: 640891780}
+  - {fileID: 687777767}
+  - {fileID: 528079692}
+  - {fileID: 225554086}
   - {fileID: 595732623}
   - {fileID: 125118863}
   - {fileID: 1018153642}
@@ -383,9 +387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1741783161}
+      - m_Target: {fileID: 148626216}
         m_TargetAssemblyTypeName: CreditPanel, Assembly-CSharp
-        m_MethodName: ShowCredits
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -440,7 +444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89237322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -601,7 +605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1000 B
+  m_text: 60 B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -873,7 +877,6 @@ GameObject:
   m_Component:
   - component: {fileID: 148626217}
   - component: {fileID: 148626218}
-  - component: {fileID: 148626219}
   m_Layer: 0
   m_Name: EconomyManager
   m_TagString: Untagged
@@ -909,24 +912,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onBubbleGenerated: {fileID: 11400000, guid: 6fda40137b98a344792bd445a34b7b79, type: 2}
---- !u!114 &148626219
+--- !u!1 &225554085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225554086}
+  - component: {fileID: 225554087}
+  m_Layer: 0
+  m_Name: FishManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225554086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225554085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43840215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225554087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148626216}
+  m_GameObject: {fileID: 225554085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d57d1f0d1f88ac34099163577a3080e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8781de3a7948df54b824f21b05fff1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableFishes:
-  - {fileID: 11400000, guid: 85cbb237ddc6bcd41b3e43773e79522f, type: 2}
-  - {fileID: 11400000, guid: 8042673b058b5e4418f886dcda8209e5, type: 2}
-  - {fileID: 11400000, guid: 82e6f98609dd8634caf2fbceebf16552, type: 2}
-  fishesManager: {fileID: 595732624}
-  economyManager: {fileID: 148626218}
+  economy: {fileID: 148626218}
+  fishTankManager: {fileID: 528079693}
 --- !u!1 &246128536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 148626219}
+      - m_Target: {fileID: 640891781}
         m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
         m_MethodName: BuyFish
         m_Mode: 3
@@ -1338,6 +1369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1274470091}
   - {fileID: 28337416}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1587,7 +1619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickConfig: {fileID: 11400000, guid: 48d6da25bde1a6d46a7e74431cb7dec1, type: 2}
-  economyManager: {fileID: 148626218}
+  economy: {fileID: 148626218}
 --- !u!1 &466224637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,7 +1752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100 B
+  m_text: 20 B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2017,6 +2049,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525641386}
   m_CullTransparentMesh: 1
+--- !u!1 &528079691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528079692}
+  - component: {fileID: 528079693}
+  m_Layer: 0
+  m_Name: FishTankManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528079692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528079691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43840215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528079693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528079691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c121520cf4854ef4eba9f207f3fc2e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankUpgradeData: {fileID: 11400000, guid: fbb639ba800472a43b948664c2d59908, type: 2}
+  currentAquarium: {fileID: 7423485937897914849}
+  aquariumParent: {fileID: 1274470091}
 --- !u!1 &537327591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,7 +2271,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595732623}
-  - component: {fileID: 595732624}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2215,18 +2293,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 43840215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &595732624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595732622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8781de3a7948df54b824f21b05fff1ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2377,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &640891779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640891780}
+  - component: {fileID: 640891781}
+  m_Layer: 0
+  m_Name: StoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &640891780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640891779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43840215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &640891781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640891779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57d1f0d1f88ac34099163577a3080e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishStoreSO: {fileID: 11400000, guid: 59bb672a2ee704d46b9df3a03fafda1b, type: 2}
+  fishesManager: {fileID: 225554087}
+  economyManager: {fileID: 148626218}
+  fishTankManager: {fileID: 528079693}
 --- !u!1 &645261072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2456,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &687777766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687777767}
+  - component: {fileID: 687777768}
+  m_Layer: 0
+  m_Name: AquariumManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &687777767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687777766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43840215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687777768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687777766}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5ec5049c521c74f9371ff107f54bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aquariums:
+  - {fileID: 7423485937897914849}
+  - {fileID: 7423485937897914849}
+  - {fileID: 7423485937897914849}
 --- !u!1 &840264630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300 B
+  m_text: 40 B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2563,7 +2725,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 148626219}
+      - m_Target: {fileID: 640891781}
         m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
         m_MethodName: BuyFish
         m_Mode: 3
@@ -2913,9 +3075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0
-
-'
+  m_text: 0.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3079,7 +3239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 148626219}
+      - m_Target: {fileID: 640891781}
         m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
         m_MethodName: BuyFish
         m_Mode: 3
@@ -3297,7 +3457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3000
+  m_text: 200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3720,6 +3880,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1274470090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274470091}
+  m_Layer: 0
+  m_Name: Aquariums
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274470091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274470090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 346110204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448631496
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,9 +4125,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606480283}
+      - m_Target: {fileID: 148626216}
         m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: RespiradorItem
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3991,7 +4182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470002203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -4468,13 +4659,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   allFishT2:
-  - {fileID: 6751752158037923751, guid: cacfabfceef1c064c85c2ae0b11f19a7, type: 3}
-  - {fileID: 9154662492572962064, guid: cbe48987cc8538949afa584dac40ab63, type: 3}
-  - {fileID: 352158448465744009, guid: e494ed3f401a3fa4fa005a31fbc90dcb, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   allFishT3:
-  - {fileID: 8136491982733214672, guid: 0b7b1f47bf145614580f0c30469a34f5, type: 3}
-  - {fileID: 1253229439003196768, guid: 95c78a54ebb26c34b8c69d80efb0da53, type: 3}
-  - {fileID: 8149329109914700279, guid: 3ba962e4ee92b0e499ba4b9b88ec536d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1606480286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4774,9 +4965,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606480283}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: PeceraItem
+      - m_Target: {fileID: 640891781}
+        m_TargetAssemblyTypeName: BubbleClicker.StoreManager, Assembly-CSharp
+        m_MethodName: BuyTankUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4831,7 +5022,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709879272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bafea6e679c07794b9cc3d02a4b1f7c7, type: 3}
   m_Name: 
@@ -5704,7 +5895,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3979841585943318021, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
       propertyPath: m_Name
-      value: Pecera
+      value: Aquarium-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979841585943318021, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5988992172468792164, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5751,6 +5946,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
+--- !u!114 &7423485937897914849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 367976419941628028, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
+  m_PrefabInstance: {fileID: 7423485937897914848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bd683cb60b83a42998e2cfe699ab7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &7760117247058622269
 AudioSource:
   m_ObjectHideFlags: 0

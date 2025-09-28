@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd0a26b28b6f24489a3bd13887816d3, type: 3}
+  m_Name: FishStoreSO
+  m_EditorClassIdentifier: 
+  levels:
+  - levelName: Level 1
+    fishes:
+    - {fileID: 11400000, guid: 85cbb237ddc6bcd41b3e43773e79522f, type: 2}
+    - {fileID: 11400000, guid: 8042673b058b5e4418f886dcda8209e5, type: 2}
+    - {fileID: 11400000, guid: 82e6f98609dd8634caf2fbceebf16552, type: 2}
+  - levelName: Level 2
+    fishes:
+    - {fileID: 11400000, guid: f089a7639038aed4da9d877207c42c60, type: 2}
+    - {fileID: 11400000, guid: dc7c9a509eab1344db573896fc9c13c5, type: 2}
+    - {fileID: 11400000, guid: cfb30ffa979dc374dbde8293e4f090de, type: 2}
+  - levelName: Level 3
+    fishes:
+    - {fileID: 11400000, guid: a1352fdba649fda49909a284ba111a1a, type: 2}
+    - {fileID: 11400000, guid: 94ccf3ea55feb7747954ad113116d693, type: 2}
+    - {fileID: 11400000, guid: 2be32ac7d49c0644e918b3a27d0d91e0, type: 2}

@@ -14,24 +14,38 @@ namespace BubbleClicker
 
         private void OnEnable()
         {
-            gameEvent.OnBubblesGenerated += UpdateBubbleText;
-            gameEvent.OnFishCountUpdated += UpdateFishText;
+            if (gameEvent != null)
+            {
+                gameEvent.OnBubblesGenerated += UpdateBubbleText;
+                gameEvent.OnFishCountUpdated += UpdateFishText;
+            }
         }
 
         private void OnDisable()
         {
-            gameEvent.OnBubblesGenerated -= UpdateBubbleText;
-            gameEvent.OnFishCountUpdated -= UpdateFishText;
+            if (gameEvent != null)
+            {
+                gameEvent.OnBubblesGenerated -= UpdateBubbleText;
+                gameEvent.OnFishCountUpdated -= UpdateFishText;
+            }
         }
 
-        private void UpdateBubbleText(int newBubbleCount)
+        private void UpdateBubbleText(double total)
         {
-            bubbleText.text = $"{newBubbleCount}";
+            bubbleText.text = FormatNumber(total);
         }
 
         private void UpdateFishText(int fishCount, int maxFish)
         {
             fishText.text = $"{fishCount}/{maxFish}";
+        }
+
+        private string FormatNumber(double n)
+        {
+            if (n >= 1_000_000_000) return (n / 1_000_000_000d).ToString("0.##") + "B";
+            if (n >= 1_000_000) return (n / 1_000_000d).ToString("0.##") + "M";
+            if (n >= 1_000) return (n / 1_000d).ToString("0.##") + "K";
+            return n.ToString("0.##");
         }
     }
 }

@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95e705be8546a524e8c6a921e49ac408, type: 3}
-  m_Name: Fish Guppy
+  m_Name: Fish Cirujano
   m_EditorClassIdentifier: 
-  fishName: Guppy
-  fishPrefab: {fileID: 7850605526008316840, guid: 4df1bb7070fa7204ebdb7d2b44c5f144, type: 3}
-  cost: 40
+  fishName: Cirujano
+  fishPrefab: {fileID: 7514599611270205802, guid: cbe48987cc8538949afa584dac40ab63, type: 3}
+  cost: 150
   bubblesPerSecond: 0
   speed: 1
-  leftBound: -2
-  rightBound: 2
-  upperBound: 3
-  lowerBound: -3
   buySound: {fileID: 0}

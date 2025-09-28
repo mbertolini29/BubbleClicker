@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc42c3823cc2c94da6b7ad0198e9cb6, type: 3}
-  m_Name: Aquarium-1
+  m_Script: {fileID: 11500000, guid: 95e705be8546a524e8c6a921e49ac408, type: 3}
+  m_Name: Fish Axolote
   m_EditorClassIdentifier: 
-  sizeX: {x: -5, y: 1}
-  sizeY: {x: -3, y: 1}
-  maxFishCount: 5
-  bubbleProduction: 1.04
-  prefab: {fileID: 3979841585943318021, guid: c3882aa7274b61a408f2c9d4722e1b51, type: 3}
+  fishName: Axolote
+  fishPrefab: {fileID: 7366599918209916814, guid: 0b7b1f47bf145614580f0c30469a34f5, type: 3}
+  cost: 250
+  bubblesPerSecond: 0
+  speed: 1
+  buySound: {fileID: 0}

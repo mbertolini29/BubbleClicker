@@ -7,20 +7,20 @@ namespace BubbleClicker
     {
         [SerializeField] private GameEventSO onBubbleGenerated;
 
-        public int TotalBubbles { get; private set; }
+        public double TotalBubbles { get; private set; }
 
-        public void AddBubbles(int amount)
+        public void AddBubbles(double amount)
         {
             TotalBubbles += amount;
-            onBubbleGenerated.Raise(TotalBubbles);
+            onBubbleGenerated.RaiseBubblesChanged(TotalBubbles);
         }
 
-        public bool SpendBubbles(int amount)
+        public bool SpendBubbles(double amount)
         {
             if(TotalBubbles >= amount)
             {
                 TotalBubbles -= amount;
-                onBubbleGenerated.Raise(TotalBubbles);
+                onBubbleGenerated.RaiseBubblesChanged(TotalBubbles);
                 return true;
             }
             return false;

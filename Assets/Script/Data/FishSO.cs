@@ -8,11 +8,14 @@ namespace BubbleClicker
         [Header("Info")]
         public string fishName;
         public GameObject fishPrefab;
-        public int cost;
-        public float bubblesPerSecond;
+        public double cost;
+        public double bubblesPerSecond;
 
         [Header("Movement")]
         public float speed = 1.0f;
+
+        [Header("Sprite")]
+        public Sprite icon;
 
         [Header("Audio")]
         public AudioClip buySound; //no se si va aca el sonido de compra...

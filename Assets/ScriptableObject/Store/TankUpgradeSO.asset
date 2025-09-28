@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f240f52f70218419b2327cd40a43f3, type: 3}
+  m_Name: TankUpgradeSO
+  m_EditorClassIdentifier: 
+  upgrades:
+  - cost: 0
+    aquarium: {fileID: 11400000, guid: 097142ccbacab7e4ab34cf2eac066407, type: 2}
+  - cost: 25
+    aquarium: {fileID: 11400000, guid: 7ece57d3fa3f1be4f94f328f28bc22f0, type: 2}
+  - cost: 50
+    aquarium: {fileID: 11400000, guid: 7affe6c3d05a0944585a480651508b02, type: 2}

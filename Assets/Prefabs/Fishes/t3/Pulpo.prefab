@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9204531907361088534}
   - component: {fileID: 8868158276435357778}
   - component: {fileID: 1260027786724553653}
-  - component: {fileID: 8149329109914700279}
+  - component: {fileID: -6000579539695884405}
   m_Layer: 0
   m_Name: Pulpo
   m_TagString: Untagged
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7866668, y: 1.2311112}
   m_EdgeRadius: 0
---- !u!114 &8149329109914700279
+--- !u!114 &-6000579539695884405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,12 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4261749843128291102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c226630aa779a344a34fbfb6fc17f07, type: 3}
+  m_Script: {fileID: 11500000, guid: ac82c6d96d5eca04ab791d09c413b852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 10000
-  speed: 1
-  leftBound: -5
-  rightBound: 1
-  upperBound: 1
-  lowerBound: -3
+  data: {fileID: 11400000, guid: 2be32ac7d49c0644e918b3a27d0d91e0, type: 2}
