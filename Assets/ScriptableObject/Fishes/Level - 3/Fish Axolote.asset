@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Axolote
   fishPrefab: {fileID: 7366599918209916814, guid: 0b7b1f47bf145614580f0c30469a34f5, type: 3}
   cost: 250
-  bubblesPerSecond: 0
+  bubblesPerSecond: 1
   speed: 1
+  icon: {fileID: -4099598516182399717, guid: c4d5a50df0919ac47af8b2bb7a83eb90, type: 3}
   buySound: {fileID: 0}

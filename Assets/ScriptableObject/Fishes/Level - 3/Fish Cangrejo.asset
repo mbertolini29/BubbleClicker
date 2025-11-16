@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Cangrejo
   fishPrefab: {fileID: 2893785507269866048, guid: 95c78a54ebb26c34b8c69d80efb0da53, type: 3}
   cost: 300
-  bubblesPerSecond: 0
+  bubblesPerSecond: 1.5
   speed: 1
+  icon: {fileID: -8860149929874352096, guid: 37090048308bb0a419dba5ea9f52bbfe, type: 3}
   buySound: {fileID: 0}

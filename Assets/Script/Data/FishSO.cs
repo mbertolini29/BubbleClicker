@@ -2,14 +2,14 @@ using UnityEngine;
 
 namespace BubbleClicker
 {
-    [CreateAssetMenu(fileName = "NewFish", menuName = "Fish/Create New Fish")]
+    [CreateAssetMenu(fileName = "FishSO", menuName = "BubbleClicker/Fish")]
     public class FishSO : ScriptableObject
     {
         [Header("Info")]
         public string fishName;
         public GameObject fishPrefab;
-        public double cost;
-        public double bubblesPerSecond;
+        public double cost; 
+        public double bubblesPerSecond; //cuanto tarda en generar una burbuja
 
         [Header("Movement")]
         public float speed = 1.0f;

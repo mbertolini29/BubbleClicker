@@ -12,6 +12,8 @@ namespace BubbleClicker
 
         private FishSO[] currentAvailableFishes = Array.Empty<FishSO>();
 
+        [SerializeField] private StoreItemUI[] shopItemsUI;
+
         private void OnEnable()
         {
             if (fishTankManager != null)
@@ -26,17 +28,35 @@ namespace BubbleClicker
 
         private void Start()
         {
+            // 1) Inicializar botones
+            for (int i = 0; i < shopItemsUI.Length; i++)
+            {
+                shopItemsUI[i].Init(this, i);
+            }
+
+            // 2) Cargar datos de nivel actual
             RefreshForLevel(fishTankManager.CurrentLevel);
         }
 
         private void RefreshForLevel(int level)
         {
+            // 
             currentAvailableFishes = fishStoreSO != null
                 ? fishStoreSO.GetFishesForLevel(level)
                 : Array.Empty<FishSO>();
 
             // TODO: acá refrescás sprites y costos de los 3 botones
-            // shopButtons[i].Set(currentAvailableFishes[i].icon, currentAvailableFishes[i].cost);
+            for (int i = 0; i < shopItemsUI.Length; i++)
+            {
+                if (i < currentAvailableFishes.Length)
+                {
+                    shopItemsUI[i].SetData(currentAvailableFishes[i], level);
+                }
+                else
+                {
+                    shopItemsUI[i].SetData(null, level);
+                }
+            }            // shopButtons[i].Set(currentAvailableFishes[i].icon, currentAvailableFishes[i].cost);
         }
 
         public void BuyFish(int index)

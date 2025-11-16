@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace BubbleClicker
 {
-    [CreateAssetMenu(fileName = "NewAquarium", menuName = "Aquarium/Create New Aquarium")]
+    [CreateAssetMenu(fileName = "AquariumSO", menuName = "BubbleClicker/Aquarium")]
     public class AquariumSO : ScriptableObject
     {
         // ancho y alto de la pecera? 

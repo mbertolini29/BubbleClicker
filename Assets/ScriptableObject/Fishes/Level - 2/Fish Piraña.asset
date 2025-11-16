@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: "Pira\xF1a"
   fishPrefab: {fileID: 5418695733597182753, guid: e494ed3f401a3fa4fa005a31fbc90dcb, type: 3}
   cost: 200
-  bubblesPerSecond: 0
+  bubblesPerSecond: 0.7
   speed: 1
+  icon: {fileID: -5694290961993469714, guid: 27c94830c1e877540831a366e993a740, type: 3}
   buySound: {fileID: 0}

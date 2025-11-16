@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Pulpo
   fishPrefab: {fileID: 4261749843128291102, guid: 3ba962e4ee92b0e499ba4b9b88ec536d, type: 3}
   cost: 500
-  bubblesPerSecond: 0
+  bubblesPerSecond: 2
   speed: 1
+  icon: {fileID: -3029221473959056273, guid: 1ba9dc669a90c2646b2a007c05301021, type: 3}
   buySound: {fileID: 0}

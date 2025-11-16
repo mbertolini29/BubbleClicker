@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Angel
   fishPrefab: {fileID: 2697493273178455463, guid: cacfabfceef1c064c85c2ae0b11f19a7, type: 3}
   cost: 100
-  bubblesPerSecond: 0
+  bubblesPerSecond: 0.5
   speed: 1
+  icon: {fileID: 2859941138590546140, guid: 1a99114dd71c4c54cab6eea51431bfe9, type: 3}
   buySound: {fileID: 0}

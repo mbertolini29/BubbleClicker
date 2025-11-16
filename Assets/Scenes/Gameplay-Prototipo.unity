@@ -461,7 +461,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bdcedc051596b944fa121d1deed24c83, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: bdcedc051596b944fa121d1deed24c83, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1108,8 +1108,9 @@ GameObject:
   - component: {fileID: 248047820}
   - component: {fileID: 248047824}
   - component: {fileID: 248047823}
+  - component: {fileID: 248047825}
   m_Layer: 5
-  m_Name: ButtonCompra 3
+  m_Name: FishButton3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,7 +1254,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1340,6 +1341,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &248047825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248047818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db94c5c1b998e2a46a211aeafe782a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BubbleClicker.StoreItemUI
+  fishImage: {fileID: 248047821}
+  costText: {fileID: 103507124}
+  buyButton: {fileID: 248047820}
 --- !u!1 &346110203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1419,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d2aede4b00f46e045a1c6d588c5d6a32, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d2aede4b00f46e045a1c6d588c5d6a32, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1556,6 +1572,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1577,6 +1595,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1801776335
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -1894,7 +1913,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -1902,6 +1920,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2212,6 +2231,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2233,6 +2254,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -2425,6 +2447,10 @@ MonoBehaviour:
   fishesManager: {fileID: 225554087}
   economyManager: {fileID: 148626218}
   fishTankManager: {fileID: 528079693}
+  shopItemsUI:
+  - {fileID: 1007607502}
+  - {fileID: 841562163}
+  - {fileID: 248047825}
 --- !u!1 &645261072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,8 +2680,9 @@ GameObject:
   - component: {fileID: 841562158}
   - component: {fileID: 841562162}
   - component: {fileID: 841562161}
+  - component: {fileID: 841562163}
   m_Layer: 5
-  m_Name: ButtonCompra 2
+  m_Name: FishButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2799,7 +2826,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2886,6 +2913,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &841562163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841562156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db94c5c1b998e2a46a211aeafe782a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BubbleClicker.StoreItemUI
+  fishImage: {fileID: 841562159}
+  costText: {fileID: 840264632}
+  buyButton: {fileID: 841562158}
 --- !u!1 &937598906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,8 +3210,9 @@ GameObject:
   - component: {fileID: 1007607497}
   - component: {fileID: 1007607501}
   - component: {fileID: 1007607500}
+  - component: {fileID: 1007607502}
   m_Layer: 5
-  m_Name: ButtonCompra 1
+  m_Name: FishButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3313,7 +3356,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1e436602debf5fa4a96c442879c5e179, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3400,6 +3443,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1007607502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007607495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db94c5c1b998e2a46a211aeafe782a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BubbleClicker.StoreItemUI
+  fishImage: {fileID: 1007607498}
+  costText: {fileID: 509349223}
+  buyButton: {fileID: 1007607497}
 --- !u!1 &1011264248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,7 +3621,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9c7b9c8ada00b574c81d3cb8f7886a12, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 9c7b9c8ada00b574c81d3cb8f7886a12, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
@@ -3938,7 +3996,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b046149d7fc6e5147a881408969ac475, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b046149d7fc6e5147a881408969ac475, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4199,7 +4257,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d5d889dadf145c4cbcef400825b3ef7, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3d5d889dadf145c4cbcef400825b3ef7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4793,7 +4851,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af76dad172bd4a545820703ea301d2bb, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: af76dad172bd4a545820703ea301d2bb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4895,7 +4953,7 @@ GameObject:
   - component: {fileID: 1709879278}
   - component: {fileID: 1709879277}
   m_Layer: 5
-  m_Name: CompraPecera
+  m_Name: BuyFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5039,7 +5097,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4dbd318099d384e48b1bfb0ee996e739, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4dbd318099d384e48b1bfb0ee996e739, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5271,7 +5329,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b7ea00c19fa2c5b4ea777d0caa374342, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: b7ea00c19fa2c5b4ea777d0caa374342, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5378,6 +5436,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5399,6 +5459,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1801776335
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -5423,7 +5484,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a6fe0183229ca5f4daa570dd98035691, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a6fe0183229ca5f4daa570dd98035691, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5520,7 +5581,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: edfcbcd252a7715499ecac70261dc9f8, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: edfcbcd252a7715499ecac70261dc9f8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5663,7 +5724,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d2aede4b00f46e045a1c6d588c5d6a32, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d2aede4b00f46e045a1c6d588c5d6a32, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5775,7 +5836,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b316cfa8f574434694b21824d954954, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4b316cfa8f574434694b21824d954954, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5967,7 +6028,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 88e23b742bc4ded429f2744c34270b54, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 88e23b742bc4ded429f2744c34270b54, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6090,7 +6151,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 333a933d0af978049adf77adb1ba8509, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 333a933d0af978049adf77adb1ba8509, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

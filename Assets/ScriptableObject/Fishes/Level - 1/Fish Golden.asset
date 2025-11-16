@@ -17,5 +17,5 @@ MonoBehaviour:
   cost: 20
   bubblesPerSecond: 0.1
   speed: 1
-  icon: {fileID: 0}
+  icon: {fileID: -2957484491877319803, guid: 608f3238564875644a646b80e445f59d, type: 3}
   buySound: {fileID: 0}

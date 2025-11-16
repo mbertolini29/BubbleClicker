@@ -15,6 +15,7 @@ MonoBehaviour:
   fishName: Cirujano
   fishPrefab: {fileID: 7514599611270205802, guid: cbe48987cc8538949afa584dac40ab63, type: 3}
   cost: 150
-  bubblesPerSecond: 0
+  bubblesPerSecond: 0.6
   speed: 1
+  icon: {fileID: -8902485088100910484, guid: 79d37d054e002d04fa757d05123c2a8f, type: 3}
   buySound: {fileID: 0}
