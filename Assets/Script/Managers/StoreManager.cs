@@ -14,6 +14,9 @@ namespace BubbleClicker
 
         [SerializeField] private StoreItemUI[] shopItemsUI;
 
+        [SerializeField] private AudioManager audioManager;
+        [SerializeField] private AudioClip errorSound;
+
         private void OnEnable()
         {
             if (fishTankManager != null)
@@ -67,19 +70,32 @@ namespace BubbleClicker
                 return;
             }
 
+            if (!fishTankManager.HasSpace())
+            {
+                Debug.Log("No hay espacio en la pecera");
+
+                audioManager.PlaySFX(errorSound);
+
+                return;
+            }
+
             var fishToBuy = currentAvailableFishes[index];
 
             if(!economyManager.SpendBubbles(fishToBuy.cost))
             {
                 Debug.Log("No tienes suficientes burbujas.");
                 // TODO: sonido de error
+
+                audioManager.PlaySFX(errorSound);
+
                 return;
             }
 
             //instanciar pez
             fishesManager.SpawnFish(fishToBuy, fishTankManager.CurrentAquarium);
-            
+
             //TODO: reproducir sonido de compra
+            audioManager.PlaySFX(fishToBuy.buySound);
             //AudioSource.PlayClipAtPoint(fishToBuy.buySound, Camera.main.transform.position);
         }
 
@@ -88,6 +104,8 @@ namespace BubbleClicker
             if (!fishTankManager.UpgradeTank(economyManager))
             {
                 Debug.Log("No tienes suficientes burbujas o ya está al máximo.");
+
+                audioManager.PlaySFX(errorSound);
                 return;
             }
 

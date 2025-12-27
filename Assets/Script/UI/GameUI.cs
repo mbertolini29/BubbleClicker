@@ -1,8 +1,18 @@
 using UnityEngine;
 using TMPro;
+using System.Globalization;
 
 namespace BubbleClicker
 {
+    public static class NumberFormatter
+    {
+        public static string Format(double value, int decimals = 1)
+        {
+            return value.ToString($"F{decimals}", CultureInfo.InvariantCulture);
+        }
+    }
+
+
     public class GameUI : MonoBehaviour
     {
         [Header("Referencias UI")]
@@ -32,7 +42,11 @@ namespace BubbleClicker
 
         private void UpdateBubbleText(double total)
         {
-            bubbleText.text = FormatNumber(total);
+            bubbleText.text = NumberFormatter.Format(total);
+            //bubbleText.text =
+            //    NumberFormatter.Format(total) + " / sec";
+
+            //bubbleText.text = FormatNumber(total);
         }
 
         private void UpdateFishText(int fishCount, int maxFish)

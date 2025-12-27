@@ -10,6 +10,7 @@ namespace BubbleClicker
         {
             public int cost;            // Costo de mejorar a este nivel
             public AquariumSO aquarium; // Pecera asociada a este nivel.
+            public AudioClip upgradeSound;
         }
 
         public TankUpgrade[] upgrades;

@@ -8,18 +8,36 @@ namespace BubbleClicker
     public class Aquarium : MonoBehaviour
     {
         [SerializeField] private AquariumSO data;        
-        [SerializeField] private GameEventSO gameEvent;  
+        [SerializeField] private GameEventSO gameEvent;
+        [SerializeField] private EconomyManager economy;
 
         [SerializeField] private List<Fish> fishesInAquarium = new();
 
         public AquariumSO Data => data;
 
-        //para un futuro, la produccion de burbujas.
-        private float bubbleProduction = 0f;
+        //Produccion de burbujas..
+        //private float bubbleProduction = 0f;
+        private float passiveTimer;
 
         //tamaño de pecera (Límites accesibles por los peces)
         public Vector2 GetBoundsWidth() => data.sizeX;
         public Vector2 GetBoundsHeight() => data.sizeY;
+
+        public void Init(EconomyManager economyManager)
+        {
+            economy = economyManager;
+        }
+
+        private void Update()
+        {
+            passiveTimer += Time.deltaTime;
+
+            if (passiveTimer >= 1f)
+            {
+                GeneratePassiveBubbles();
+                passiveTimer = 0f;
+            }
+        }
 
         //cant de peces.
         public int FishCount => fishesInAquarium.Count;
@@ -57,15 +75,11 @@ namespace BubbleClicker
             //bubbleProduction *= data.bubbleProduction;
         }
 
-        private void GenerateBubbles()
+        private void GeneratePassiveBubbles()
         {
-            Debug.Log($"La pecera generó {bubbleProduction} burbujas.");
-        }
-        
-        //public int GetTotalBubbleProduction()
-        //{
-        //    return fishesInAquarium.Sum(FishSO => FishSO.BubblesPerSecond) * (int)data.bubbleMultiplier;
-        //}
+            if (economy == null || data == null) return;
 
+            economy.AddBubbles(data.bubbleProduction);
+        }
     }
 }

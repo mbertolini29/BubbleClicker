@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
 
     public GameObject continueButton;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonSound;
+
     void Start()
     {
         if(PlayerPrefs.HasKey("CurrentLevel"))
@@ -40,9 +43,11 @@ public class MainMenu : MonoBehaviour
 
         //PlayerPrefs.SetString("CurrentLevel", ""); //reinicia la info guardada..
         //PlayerPrefs.SetString(firstLevel + "_cp", ""); //reinicia los checkpoint
+        audioSource.PlayOneShot(buttonSound);
 
         //Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void QuitGame()

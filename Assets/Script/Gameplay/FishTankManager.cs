@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System;
 using System.Collections.Generic;
 
@@ -10,7 +10,10 @@ namespace BubbleClicker
         [SerializeField] private TankUpgradeSO tankUpgradeData;     
         [SerializeField] private Aquarium currentAquarium;
         [SerializeField] private Transform aquariumParent; // en donde instanciamos las peceras..
-                
+        [SerializeField] private EconomyManager economy;
+
+        [SerializeField] private AudioManager audioManager;
+
         //[SerializeField] private SpriteRenderer tankRenderer; //sprite de la pecera.
 
         public int CurrentLevel { get; private set; } = 0;
@@ -30,12 +33,24 @@ namespace BubbleClicker
             if (!economy.SpendBubbles(next.cost)) 
                 return false;
 
+            // ðŸ”Š SONIDO DE UPGRADE
+            audioManager.PlaySFX(next.upgradeSound);
+
             // 1. Guardar peces actuales
             List<Fish> fishes = new List<Fish>(currentAquarium.GetAllFish());
 
             // 2. Instanciar nueva pecera
-            var newAquariumGO = Instantiate(next.aquarium.prefab, next.aquarium.prefab.transform.position, Quaternion.identity, aquariumParent);
+            var newAquariumGO = Instantiate(
+                next.aquarium.prefab, 
+                next.aquarium.prefab.transform.position, 
+                Quaternion.identity, 
+                aquariumParent
+            );
+            
             var newAquarium = newAquariumGO.GetComponent<Aquarium>();
+
+            //inyectas/agregas la economia...
+            newAquarium.Init(economy);
 
             // 3. Migrar peces
             foreach (var fish in fishes)
@@ -70,6 +85,11 @@ namespace BubbleClicker
             return tankUpgradeData.GetUpgrade(CurrentLevel + 1).cost;
         }
 
+        public bool HasSpace()
+        {
+            return currentAquarium.FishCount < currentAquarium.MaxFish;
+        }
+
 
 
         //public void SetLevel(int level)
@@ -84,12 +104,12 @@ namespace BubbleClicker
         //{
         //    currentAquarium = aquarium;
 
-        //    // Podrías recalcular límites si la nueva pecera cambia bounds dinámicamente
+        //    // PodrÃ­as recalcular lÃ­mites si la nueva pecera cambia bounds dinÃ¡micamente
         //    // o esos limites no lo tiene la pecera? 
         //}
 
 
-        // Método para intentar subir de nivel
+        // MÃ©todo para intentar subir de nivel
         //public void LevelUp()
         //{
         //    if (currentLevel < maxLevel)
@@ -102,7 +122,7 @@ namespace BubbleClicker
         //    }
         //    else
         //    {
-        //        Debug.Log("FishTankManager: Ya está en el nivel máximo");
+        //        Debug.Log("FishTankManager: Ya estÃ¡ en el nivel mÃ¡ximo");
         //    }
         //}
     }
