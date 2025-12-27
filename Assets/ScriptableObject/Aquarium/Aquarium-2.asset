@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc42c3823cc2c94da6b7ad0198e9cb6, type: 3}
   m_Name: Aquarium-2
   m_EditorClassIdentifier: 
+  maxFishCount: 10
+  bubbleProduction: 1.1
   sizeX: {x: -7, y: 1}
   sizeY: {x: -3, y: 1}
-  maxFishCount: 10
-  bubbleProduction: 1.08
   prefab: {fileID: 4465090061002689413, guid: c47ac5920b6c65545ae9581591ad2d36, type: 3}

@@ -15,7 +15,10 @@ MonoBehaviour:
   upgrades:
   - cost: 0
     aquarium: {fileID: 11400000, guid: 097142ccbacab7e4ab34cf2eac066407, type: 2}
+    upgradeSound: {fileID: 8300000, guid: 4dbd318099d384e48b1bfb0ee996e739, type: 3}
   - cost: 25
     aquarium: {fileID: 11400000, guid: 7ece57d3fa3f1be4f94f328f28bc22f0, type: 2}
+    upgradeSound: {fileID: 8300000, guid: 4dbd318099d384e48b1bfb0ee996e739, type: 3}
   - cost: 50
     aquarium: {fileID: 11400000, guid: 7affe6c3d05a0944585a480651508b02, type: 2}
+    upgradeSound: {fileID: 8300000, guid: 4dbd318099d384e48b1bfb0ee996e739, type: 3}

@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: c18307707346a384381eb5cae220cf8a
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
+    path: Assets/Scenes/Gameplay-Prototipo.unity
+    guid: 30f57d6e2691f354e947e7aabf6f9d26
+  - enabled: 0
+    path: Assets/Scenes/Gameplay-Jam.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

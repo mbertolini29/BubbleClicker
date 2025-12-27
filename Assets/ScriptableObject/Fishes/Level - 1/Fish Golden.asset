@@ -18,4 +18,4 @@ MonoBehaviour:
   bubblesPerSecond: 0.1
   speed: 1
   icon: {fileID: -2957484491877319803, guid: 608f3238564875644a646b80e445f59d, type: 3}
-  buySound: {fileID: 0}
+  buySound: {fileID: 8300000, guid: efafb2dc617eb1743afcdfefd12268ed, type: 3}
